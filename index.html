@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seguimiento PQRSDF | ARANDA</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="wrap">
+<header>
+<div class="brand-block">
+  <div class="brand-logos" aria-label="Logos institucionales">
+    <img class="logo-migracion" src="logo_migracion.png" alt="Migración Colombia">
+    <span class="logo-divider" aria-hidden="true"></span>
+    <img class="logo-andes" src="logo_andesbpo.png" alt="Andes BPO">
+  </div>
+  <div class="brand-copy">
+    <p class="eyebrow">ANDES BPO · MIGRACIÓN COLOMBIA</p>
+    <h1>Seguimiento de casos PQRSDF</h1>
+    <p class="sub"><span id="period">Cargando periodo...</span></p>
+  </div>
+</div>
+<div class="header-right"><small>Actualizado</small><strong id="updated">—</strong><button id="download" class="download">Descargar base CSV</button></div></header>
+<nav class="tabs" aria-label="Vistas del dashboard">
+<button class="tab active" data-view="ingresos">1. Ingresos diarios</button>
+<button class="tab" data-view="registrados">2. Casos registrados</button>
+<button class="tab" data-view="regionales">3. Regionales y categorías</button>
+</nav>
+<main>
+<section id="view-ingresos" class="view active">
+<div class="intro"><div></div><div class="metric"><small>Total de casos</small><strong id="totalCases">—</strong></div></div>
+<div class="panel"><div class="panel-head"><h3>Casos ingresados por día</h3><span class="muted">Todos los estados</span></div>
+<div class="filters"><label>Desde<input type="date" id="dailyFrom"></label><label>Hasta<input type="date" id="dailyTo"></label><button class="secondary" id="clearDaily">Limpiar fechas</button></div>
+<div id="dailyChart" class="daily-chart"></div>
+<div class="daily-bottom-grid">
+  <div id="dailyTable" class="table-wrap"></div>
+  <aside class="insight-card" aria-label="Resumen del comportamiento de ingresos">
+    <div class="insight-heading">Resumen del comportamiento</div>
+    <div class="insight-stat"><span>Mayor ingreso diario</span><strong id="dailyMax">—</strong><small id="dailyMaxDate">—</small></div>
+    <div class="insight-stat"><span>Menor ingreso diario</span><strong id="dailyMin">—</strong><small id="dailyMinDate">—</small></div>
+    <div class="insight-stat"><span>Total del periodo</span><strong id="dailyTotal">—</strong></div>
+    <div class="insight-stat"><span>Promedio diario</span><strong id="dailyAverage">—</strong></div>
+  </aside>
+</div></div>
+</section>
+<section id="view-registrados" class="view">
+<div class="intro"><div><span class="eyebrow">VISTA 2</span><h2>Casos en estado «Registrada»</h2><p>Volumen diario y antigüedad en días hábiles de cada caso que permanece registrado.</p></div><div class="metric"><small>Total en estado Registrada</small><strong id="registeredTotal">—</strong></div></div>
+<div class="kpis"><article><small>Promedio días hábiles</small><strong id="registeredAvg">—</strong></article><article><small>Mayor antigüedad</small><strong id="registeredMax">—</strong></article><article><small>Casos con más de 5 días</small><strong id="registeredOver5">—</strong></article></div>
+<div class="panel registered-overview-panel">
+  <div class="registered-chart-area">
+    <div class="panel-head"><h3>Casos registrados por fecha de ingreso</h3><span class="muted">Solo estado Registrada</span></div>
+    <div id="registeredDailyChart" class="daily-chart"></div>
+  </div>
+  <aside class="age-summary-panel">
+    <div class="panel-head"><h3>Antigüedad en días hábiles</h3><span class="muted">Selecciona para filtrar</span></div>
+    <div id="ageSummary" class="age-summary-grid"></div>
+  </aside>
+</div>
+<div class="panel"><div class="panel-head"><h3>Relación de casos y días hábiles</h3><span id="registeredCount" class="muted"></span></div>
+<div class="filters"><label>Buscar número de caso<input id="registeredSearch" type="search" placeholder="Escribe el número de caso"></label><label>Días hábiles exactos<input id="minDays" type="number" min="0" placeholder="Ej. 3"></label></div>
+<div class="table-wrap"><table><thead><tr><th>Caso</th><th>Fecha de ingreso</th><th>Días hábiles</th><th>Grupo responsable</th><th>Responsable</th><th>Categoría</th></tr></thead><tbody id="registeredRows"></tbody></table></div></div>
+</section>
+<section id="view-regionales" class="view">
+<div class="intro"><div><span class="eyebrow">VISTA 3</span><h2>Regionales y categorías asignadas</h2><p>Distribución de los casos cuyo estado actual es «Asignación a enlance competente».</p></div><div class="metric"><small>Total en asignación</small><strong id="assignedTotal">—</strong></div></div>
+<div class="regional-summary-grid">
+  <div class="panel highlight">
+    <small>REGIONAL CON MÁS CASOS ASIGNADOS</small>
+    <h3 id="topRegional">—</h3>
+    <strong id="topRegionalCount">—</strong><span>casos asignados</span>
+    <div class="summary-share"><span>Participación sobre el total asignado</span><b id="topRegionalShare">—</b></div>
+  </div>
+  <div class="panel category-highlight">
+    <small>CATEGORÍA CON MAYOR VOLUMEN</small>
+    <h3 id="topCategory">—</h3>
+    <strong id="topCategoryCount">—</strong><span>casos asignados</span>
+    <div class="summary-share"><span>Participación sobre el total asignado</span><b id="topCategoryShare">—</b></div>
+  </div>
+</div>
+<div class="two-col"><div class="panel"><div class="panel-head"><h3>Casos asignados por regional</h3></div><div id="regionalChart" class="bars"></div></div>
+<div class="panel"><div class="panel-head"><h3>Casos asignados por categoría</h3></div><div id="categoryChart" class="bars"></div></div></div>
+<div class="panel"><div class="panel-head"><h3>Detalle de casos asignados</h3><span id="assignedCount" class="muted"></span></div>
+<div class="filters"><label>Filtrar regional<select id="regionalFilter"><option value="">Todas las regionales</option></select></label><label>Filtrar categoría<select id="categoryFilter"><option value="">Todas las categorías</option></select></label></div>
+<div class="table-wrap"><table><thead><tr><th>Caso</th><th>Fecha ingreso</th><th>Regional / grupo</th><th>Categoría</th><th>Responsable</th></tr></thead><tbody id="assignedRows"></tbody></table></div></div>
+</section>
+</main><footer></footer></div>
+<script src="datos_pqrsdf.js"></script><script src="dashboard.js"></script></body></html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--navy:#15395f;--blue:#3478b9;--green:#15966b;--amber:#d9952e;--red:#c65353;--ink:#1d2d42;--muted:#77879a;--line:#e4eaf1;--bg:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:14px Inter,Arial,sans-serif;color:var(--ink)}.wrap{max-width:1500px;margin:auto;padding:26px 30px}header{display:flex;justify-content:space-between;align-items:center;gap:24px;background:linear-gradient(115deg,#102c50,#24547f);color:white;padding:22px 26px;border-radius:16px}
+.brand-block{display:flex;align-items:center;gap:22px;min-width:0}
+.brand-logos{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border-radius:12px;padding:9px 13px;min-width:285px;height:88px;flex-shrink:0}
+.brand-logos img{display:block;object-fit:contain;background:#fff}
+.logo-migracion{width:150px;height:70px}
+.logo-andes{width:92px;height:70px}
+.logo-divider{height:52px;width:1px;background:#e5e9ef}
+.brand-copy{min-width:0}
+h1{font-size:25px;margin:0 0 6px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.2px;color:#9db6d0;margin:0 0 7px}.sub{font-size:12px;color:#d5e1ed;margin:0}.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px}.header-right small{font-size:10px;color:#c3d3e3}.header-right strong{font-size:12px}.download{margin-top:6px;background:white;color:var(--navy);font-weight:700}.tabs{display:flex;gap:8px;margin:18px 0 16px;flex-wrap:wrap}.tab{background:#e8eef5;color:#50647b;border:1px solid #dce5ee;padding:12px 17px;border-radius:9px;font-weight:700}.tab.active{background:var(--navy);color:white;border-color:var(--navy)}.view{display:none}.view.active{display:block}.intro{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:10px 2px 16px}.intro h2{font-size:21px;margin:0 0 6px}.intro p{font-size:12px;color:var(--muted);margin:0}.metric{min-width:175px;background:white;border:1px solid var(--line);border-radius:12px;padding:13px 16px}.metric small,.kpis small{display:block;color:var(--muted);font-size:10px}.metric strong{display:block;font-size:27px;margin-top:5px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:19px;margin-bottom:15px;box-shadow:0 5px 18px #18345408}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.panel h3{font-size:15px;margin:0}.muted{font-size:10px;color:var(--muted)}.filters{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:12px 0}.filters label{display:flex;flex-direction:column;gap:5px;color:#607188;font-size:10px;font-weight:600}.filters input,.filters select{height:36px;border:1px solid #dce4ed;border-radius:7px;padding:0 9px;min-width:150px;font:12px Inter;color:#25374d}.secondary{border:1px solid #dce4ed;background:#f1f4f8;color:#41546b;padding:9px 12px;border-radius:7px;font-weight:600}.daily-chart{display:flex;align-items:flex-end;gap:7px;min-height:185px;overflow-x:auto;padding:15px 3px 5px;border-bottom:1px solid var(--line)}.day{min-width:32px;flex:1;max-width:70px;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px}.day .value{font-size:9px;color:#53677e}.day .stick{width:65%;min-width:8px;background:var(--blue);border-radius:4px 4px 0 0;min-height:2px}.day .date{font-size:9px;color:#8290a1;white-space:nowrap}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px}th{background:#f5f8fb;text-align:left;padding:11px;font-size:9px;color:#62748a;text-transform:uppercase;position:sticky;top:0}td{padding:10px;border-top:1px solid #edf1f5;font-size:10px;color:#43566c;white-space:nowrap}tbody tr:hover td{background:#f9fbfd}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:15px}.kpis article{background:white;border:1px solid var(--line);border-radius:12px;padding:15px 17px}.kpis strong{font-size:23px;display:block;margin-top:6px}.bars{display:flex;flex-direction:column;gap:12px}.bar{display:grid;grid-template-columns:minmax(115px,190px) 1fr 45px;gap:9px;align-items:center}.bar label{font-size:10px;color:#53677e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track{height:9px;background:#edf1f5;border-radius:20px;overflow:hidden}.fill{height:100%;background:var(--blue);border-radius:20px}.bar b{font-size:10px;text-align:right}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:15px}.highlight{background:#eef5fb;border-color:#d6e5f3}.highlight small{font-size:10px;letter-spacing:1px;font-weight:800;color:#55718e}.highlight h3{font-size:20px;margin:8px 0}.highlight strong{font-size:27px;color:var(--navy);margin-right:7px}.highlight span{font-size:11px;color:var(--muted)}footer{text-align:center;color:#9aa6b4;font-size:10px;padding:18px}
+@media(max-width:1000px){header{align-items:flex-start;flex-direction:column}.header-right{align-items:flex-start}.brand-block{flex-wrap:wrap}}
+@media(max-width:600px){.wrap{padding:14px}.brand-block{align-items:flex-start;flex-direction:column;gap:14px}.brand-logos{min-width:0;width:100%;max-width:330px}.logo-migracion{width:55%}.logo-andes{width:34%}.two-col{grid-template-columns:1fr}.intro{align-items:flex-start;flex-direction:column}.metric{width:100%}}@media(max-width:600px){header{align-items:flex-start;flex-direction:column}.header-right{align-items:flex-start}.kpis{grid-template-columns:1fr}.tab{flex:1}.bar{grid-template-columns:100px 1fr 40px}}
+
+
+/* Tabla de ingresos diarios: columnas compactas, sin distribuirse por todo el ancho */
+#dailyTable .table-wrap{width:min(100%,560px);max-width:560px}
+#dailyTable table{width:100%;min-width:0;table-layout:fixed}
+#dailyTable th:first-child,#dailyTable td:first-child{width:58%}
+#dailyTable th:last-child,#dailyTable td:last-child{width:42%}
+
+/* Ajustes de distribución: se conserva la identidad visual existente */
+.kpis{grid-template-columns:repeat(3,minmax(180px,280px));gap:10px;max-width:880px;margin:0 0 12px}
+.kpis article{padding:10px 13px;border-radius:10px}
+.kpis strong{font-size:19px;margin-top:3px}
+.kpis small{font-size:10px}
+.daily-chart{min-height:140px;height:150px;padding:8px 3px 4px;gap:6px}
+.day{height:128px;min-width:30px;max-width:64px;gap:3px}
+.day .value,.day .date{font-size:9px}
+#dailyTable{width:min(100%,620px);max-width:620px;margin-top:10px}
+#dailyTable table{width:100%;min-width:0;table-layout:fixed}
+#dailyTable th:first-child,#dailyTable td:first-child{width:55%}
+#dailyTable th:last-child,#dailyTable td:last-child{width:45%}
+#dailyTable th,#dailyTable td{padding:8px 10px}
+#registeredDailyChart{height:150px;min-height:140px;max-width:760px;justify-content:flex-start}
+#registeredDailyChart .day{flex:0 0 58px;max-width:58px}
+#view-registrados .panel{padding:15px 18px}
+#view-registrados .panel-head{margin-bottom:9px}
+#view-registrados .filters{margin:8px 0 10px}
+#view-registrados .table-wrap table{min-width:0;table-layout:fixed;width:100%}
+#view-registrados .table-wrap th:nth-child(1),#view-registrados .table-wrap td:nth-child(1){width:9%}
+#view-registrados .table-wrap th:nth-child(2),#view-registrados .table-wrap td:nth-child(2){width:13%}
+#view-registrados .table-wrap th:nth-child(3),#view-registrados .table-wrap td:nth-child(3){width:10%}
+#view-registrados .table-wrap th:nth-child(4),#view-registrados .table-wrap td:nth-child(4){width:19%}
+#view-registrados .table-wrap th:nth-child(5),#view-registrados .table-wrap td:nth-child(5){width:25%}
+#view-registrados .table-wrap th:nth-child(6),#view-registrados .table-wrap td:nth-child(6){width:24%}
+#view-registrados .table-wrap td{overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr));max-width:100%}}
+@media(max-width:600px){.kpis{grid-template-columns:1fr}.daily-chart{height:140px}.day{height:118px}}
+
+
+/* Paneles de lectura rápida: complementan los gráficos sin alterar la identidad visual */
+.daily-insights-grid{display:grid;grid-template-columns:minmax(0,2.25fr) minmax(220px,.85fr);gap:18px;align-items:stretch}
+.daily-insights-grid .daily-chart{min-width:0;height:205px;min-height:205px}
+.insight-card{border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:13px 15px;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center}
+.insight-heading{grid-column:1/-1;color:var(--navy);font-size:11px;font-weight:800;margin-bottom:1px}
+.insight-stat{display:flex;flex-direction:column;gap:3px;min-width:0}
+.insight-stat span{font-size:9px;color:var(--muted)}
+.insight-stat strong{font-size:20px;line-height:1.1;color:var(--navy)}
+.insight-stat small{font-size:9px;color:var(--muted)}
+.age-summary-panel{padding:14px 17px}
+.age-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:9px}
+.age-card{display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;border:1px solid var(--line);background:#f8fafc;border-radius:9px;padding:10px 12px;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.age-card:hover{border-color:var(--blue);background:#f1f6fb}
+.age-card[aria-pressed="true"]{border-color:var(--navy);background:#eaf1f8;box-shadow:inset 0 0 0 1px var(--navy)}
+.age-card span{font-size:9px;color:var(--muted)}
+.age-card strong{font-size:22px;color:var(--navy);line-height:1.1}
+.age-card small{font-size:9px;color:var(--muted)}
+.regional-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px}
+.regional-summary-grid .panel{margin:0;min-height:145px}
+.category-highlight{background:#f3f7fb;border-color:#dce7f1}
+.category-highlight>small{font-size:10px;letter-spacing:1px;font-weight:800;color:#55718e}
+.category-highlight h3{font-size:20px;margin:8px 0}
+.category-highlight>strong{font-size:27px;color:var(--navy);margin-right:7px}
+.category-highlight>span{font-size:11px;color:var(--muted)}
+.summary-share{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #dce5ee;margin-top:12px;padding-top:9px}
+.summary-share span{font-size:9px;color:var(--muted)}
+.summary-share b{font-size:12px;color:var(--navy)}
+@media(max-width:900px){.daily-insights-grid{grid-template-columns:1fr}.daily-insights-grid .daily-chart{height:175px;min-height:175px}.regional-summary-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.insight-card{grid-template-columns:1fr 1fr}.age-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Distribución final: los complementos ocupan el espacio vacío señalado */
+.daily-insights-grid{display:block}
+.daily-insights-grid .daily-chart{width:100%;height:150px;min-height:140px}
+.daily-bottom-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(230px,.8fr);gap:16px;align-items:stretch;margin-top:10px}
+#dailyTable{width:100%;max-width:none;margin-top:0;min-width:0}
+#dailyTable .table-wrap{width:100%;max-width:none}
+#dailyTable table{width:100%;min-width:0;table-layout:fixed}
+.insight-card{min-height:100%;grid-template-columns:1fr 1fr;align-content:center}
+.registered-overview-panel{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(230px,.85fr);gap:16px;align-items:stretch}
+.registered-chart-area{min-width:0}
+.registered-chart-area .panel-head{margin-bottom:9px}
+#registeredDailyChart{width:100%;max-width:none;height:150px;min-height:140px}
+.age-summary-panel{border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:13px 14px;min-width:0}
+.age-summary-panel .panel-head{display:block;margin-bottom:10px}
+.age-summary-panel .panel-head h3{font-size:12px;margin:0 0 4px}
+.age-summary-panel .panel-head .muted{font-size:9px}
+.age-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.age-card{padding:9px 10px;min-width:0}
+.age-card strong{font-size:20px}
+@media(max-width:900px){
+ .daily-bottom-grid,.registered-overview-panel{grid-template-columns:1fr}
+ .insight-card{min-height:130px}
+ .age-summary-grid{grid-template-columns:repeat(auto-fit,minmax(115px,1fr))}
+}
+@media(max-width:600px){
+ .daily-bottom-grid{grid-template-columns:1fr}
+ .age-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
