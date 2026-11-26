@@ -1,6 +1,6 @@
 window.PQRSDF_DATA = {
   "metadata": {
-    "generatedAt": "2026-11-25 06:36:07",
+    "generatedAt": "2026-11-26 07:27:25",
     "sourceFile": "para el dash.xlsx",
     "sourceSheet": "Casos ARANDA",
     "rowsRead": 5945,
